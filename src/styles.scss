@@ -1,1 +1,90 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&display=swap");
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "JetBrains Mono", monospace;
+  color: #c0caf5;
+}
+
+*::-moz-selection {
+  background-color: #33467c;
+}
+
+*::selection {
+  background-color: #33467c;
+}
+
+::-webkit-scrollbar {
+  background-color: transparent;
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #15161e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ff9e64;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b57047;
+}
+
+::-webkit-scrollbar-corner {
+  color: #15161e;
+}
+
+::-webkit-scrollbar-button {
+  color: #15161e;
+}
+
+@keyframes blip {
+  0% {
+    opacity: 100%;
+  }
+  10% {
+    opacity: 0%;
+  }
+  30% {
+    opacity: 100%;
+  }
+  80% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes blip-banner {
+  0% {
+    opacity: 100%;
+  }
+  10% {
+    opacity: 0%;
+  }
+  20% {
+    opacity: 100%;
+  }
+  40% {
+    opacity: 100%;
+  }
+  50% {
+    opacity: 0%;
+  }
+  60% {
+    opacity: 100%;
+  }
+  70% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
