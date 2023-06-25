@@ -1,42 +1,40 @@
-<label for="prompt-text"
-  ><span class="bracket">[</span>visitor@lovi <span class="tilde">~</span
-  ><span class="bracket">]</span><span class="bang">$ </span>
-</label>
-<input
-  #prompt
-  type="text"
-  class="prompt-text"
-  name="prompt-text"
-  spellcheck="false"
-  autocomplete="off"
-  (keyup.enter)="executeCmd(prompt.value)"
-/>
+<div class="propmt-flex">
+  <label for="prompt-text"
+    ><span class="bracket">[</span>visitor@lovi <span class="tilde">~</span
+    ><span class="bracket">]</span><span class="bang">$ </span>
+  </label>
+  <input
+    #prompt
+    type="text"
+    class="prompt-text"
+    name="prompt-text"
+    spellcheck="false"
+    autocomplete="off"
+    (keyup.enter)="executeCmd(prompt.value)"
+  />
+</div>
 
-<!-- <div [ngSwitch]="cmd"> -->
-<!--   <div *ngSwitchCase="'banner'"> -->
-<!--     <app-banner></app-banner> -->
-<!--   </div> -->
-<!--   <div *ngSwitchCase="'help'"> -->
-<!--     <app-help></app-help> -->
-<!--   </div> -->
-<!--   <div *ngSwitchCase="'social'"> -->
-<!--     social -->
-<!--     <app-prompt></app-prompt> -->
-<!--   </div> -->
-<!--   <div *ngSwitchDefault> -->
-<!--     <div>hey</div> -->
-<!--   </div> -->
-<!-- </div> -->
-
-<!-- <ng-template #loading> -->
-<!--   <div>Loading...</div> -->
-<!-- </ng-template> -->
 <div *ngIf="validCmds.includes(cmd); else cmdNotFound">
   <ng-template [ngIf]="cmd == 'banner'">
     <app-banner></app-banner>
   </ng-template>
-  <ng-template [ngIf]="cmd == 'help'">
+  <ng-template [ngIf]="cmd == 'help' || cmd == 'ls'">
     <app-help></app-help>
+  </ng-template>
+  <ng-template [ngIf]="cmd == 'about'">
+    <app-about></app-about>
+  </ng-template>
+  <ng-template [ngIf]="cmd == 'projects'">
+    <app-projects></app-projects>
+  </ng-template>
+  <ng-template [ngIf]="cmd == 'userfetch'">
+    <app-userfetch></app-userfetch>
+  </ng-template>
+  <ng-template [ngIf]="cmd == 'social'">
+    <app-social></app-social>
+  </ng-template>
+  <ng-template [ngIf]="cmd == 'rice'">
+    <app-rice></app-rice>
   </ng-template>
 </div>
 

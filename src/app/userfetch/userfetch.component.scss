@@ -1,0 +1,75 @@
+.colors {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px 25px;
+}
+
+.color-box {
+  width: 2em;
+  height: 1em;
+  background-color: #fff;
+}
+
+.blue {
+  background-color: #7aa2f7;
+}
+
+.green {
+  background-color: #9ece6a;
+}
+
+.orange {
+  background-color: #ff9e64;
+}
+
+.violet {
+  background-color: #bb9af7;
+}
+
+.red {
+  background-color: #f77683;
+}
+
+.white {
+  background-color: #c0caf5;
+}
+
+.userfetch {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.info {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  flex-direction: column;
+  padding: 30px;
+  height: 100%;
+}
+
+p {
+  margin: 5px 0px;
+}
+
+.fetchicon {
+  text-shadow: #ff9e64 0 0 5px, #ff9e64 0 0 10px;
+}
+
+pre {
+  color: #f77683;
+  text-shadow: #f77683 0 0 10px, #f77683 0 0 20px, #f77683 0 0 30px,
+    #f77683 0 0 40px;
+  animation: blip-banner 0.7s forwards;
+}

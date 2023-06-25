@@ -1,0 +1,50 @@
+img {
+  width: 20em;
+  height: 20em;
+  margin: 2em;
+  border: 5px solid #7aa2f7;
+  border-radius: 50%;
+  box-shadow: #7aa2f7 0 0 15px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.quit-msg {
+  color: #f77683;
+  margin: 20px 0px;
+}
+
+.highlights {
+  color: #c0caf5;
+  text-shadow: #c0caf5 0 0 5px, #c0caf5 0 0 10px;
+}
+
+input {
+  background-color: #15161e;
+  border: none;
+  outline: none;
+}
+
+p {
+  max-width: 80%;
+  text-align: center;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.markup {
+  color: #15161e;
+  background-color: #c0caf5;
+  border-radius: 5px;
+  padding: 0px 5px;
+}

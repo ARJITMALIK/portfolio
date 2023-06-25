@@ -1,0 +1,19 @@
+a {
+  text-decoration: none;
+  margin: 3px 0px;
+  text-shadow: #7aa2f7 0 0 5px, #7aa2f7 0 0 10px;
+  animation: blip 0.2s forwards;
+}
+
+.social {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 10px 20px;
+}
+
+.social-icon {
+  color: #7aa2f7;
+  text-shadow: #fff 0 0 0px;
+}

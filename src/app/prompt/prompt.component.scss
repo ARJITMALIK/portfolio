@@ -21,14 +21,23 @@ pre {
   font-size: 15px;
 }
 
+.prompt-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
 .prompt-text {
   background-color: #15161e;
   border: none;
-  caret-shape: underscore;
   caret-color: #7aa2f7;
   color: #c0caf5;
   outline: none;
   font-size: 1em;
+  width: 70%;
+  min-width: 300px;
 }
 
 .tilde {

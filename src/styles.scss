@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
 
 * {
   padding: 0px;
@@ -82,6 +83,57 @@
     opacity: 100%;
   }
   70% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes blip-exit {
+  0% {
+    opacity: 100%;
+  }
+  2% {
+    opacity: 0%;
+  }
+  6% {
+    opacity: 100%;
+  }
+  8% {
+    opacity: 0%;
+  }
+  10% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes no-blip {
+  0% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes blip-exit-backwards {
+  0% {
+    opacity: 100%;
+  }
+  80% {
+    opacity: 100%;
+  }
+  85% {
+    opacity: 0%;
+  }
+  90% {
+    opacity: 100%;
+  }
+  95% {
     opacity: 0%;
   }
   100% {

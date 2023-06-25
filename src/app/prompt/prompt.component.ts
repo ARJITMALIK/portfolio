@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-prompt',
@@ -8,7 +9,23 @@ import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 export class PromptComponent implements AfterViewInit {
   @ViewChild('prompt') prompt!: ElementRef;
 
-  public validCmds: string[] = ['help', 'about', 'social', 'banner', 'error'];
+  constructor(private router: Router) {
+    this.router.routeReuseStrategy.shouldReuseRoute = () => false;
+  }
+
+  public validCmds: string[] = [
+    'help',
+    'about',
+    'social',
+    'banner',
+    'error',
+    'clear',
+    'userfetch',
+    'rice',
+    'ls',
+    'projects',
+    'exit',
+  ];
   cmd: string = 'error';
 
   ngAfterViewInit() {
@@ -16,7 +33,20 @@ export class PromptComponent implements AfterViewInit {
   }
 
   executeCmd(promtCmd: string): void {
-    this.cmd = promtCmd;
-    this.prompt.nativeElement.toggleAttribute('readonly');
+    if (promtCmd === 'clear' || promtCmd === 'c') {
+      this.router.navigate(['/prompt']);
+    } else if (promtCmd === 'home' || promtCmd === 'h') {
+      this.router.navigate(['']);
+    } else if (promtCmd === 'about') {
+      this.router.navigate(['/about']);
+    } else if (promtCmd === 'exit') {
+      this.router.navigate(['/exit']);
+      setTimeout(() => {
+        window.self.close();
+      }, 8000);
+    } else {
+      this.cmd = promtCmd;
+      this.prompt.nativeElement.toggleAttribute('readonly');
+    }
   }
 }
